@@ -127,7 +127,7 @@ class Actor:
         else:
             self.log(f"ERROR: dest_q does not exist.  Enqueue dest={q_name} task={task_method} args={args}", 0)
 
-    def query(self, q_name, task_method, timeout, *args, **kwargs):
+    def task_query(self, q_name, task_method, timeout, *args, **kwargs):
         data = None
         rtn_code = 0
         self.log(f"Query dest={q_name} task={task_method} args={args}", 5)
